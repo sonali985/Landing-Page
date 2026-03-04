@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NextGen Digital Agency</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* Animated Background */
+body::before{
+    content:"";
+    position:fixed;
+    width:600px;
+    height:600px;
+    background:linear-gradient(45deg,#38bdf8,#6366f1);
+    filter:blur(200px);
+    top:-150px;
+    left:-150px;
+    z-index:-1;
+    opacity:0.4;
+}
+
+/* NAVBAR */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 10%;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(15px);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav h1{
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#38bdf8;
+}
+
+/* HERO */
+.hero{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    padding:0 20px;
+}
+
+.hero h2{
+    font-size:55px;
+    font-weight:800;
+    background:linear-gradient(to right,#38bdf8,#6366f1);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.hero p{
+    max-width:600px;
+    margin:20px 0;
+    opacity:0.85;
+}
+
+.btn{
+    padding:14px 35px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+    margin:10px;
+}
+
+.primary{
+    background:#38bdf8;
+    color:black;
+    box-shadow:0 0 20px #38bdf8;
+}
+
+.primary:hover{
+    transform:scale(1.1);
+}
+
+.secondary{
+    border:2px solid #38bdf8;
+    color:#38bdf8;
+}
+
+.secondary:hover{
+    background:#38bdf8;
+    color:black;
+}
+
+/* FEATURES */
+.features{
+    padding:100px 10%;
+    text-align:center;
+}
+
+.features h2{
+    font-size:36px;
+    margin-bottom:60px;
+}
+
+.feature-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.feature-card{
+    background:rgba(255,255,255,0.05);
+    padding:40px 25px;
+    border-radius:20px;
+    backdrop-filter:blur(20px);
+    transition:0.4s;
+}
+
+.feature-card:hover{
+    transform:translateY(-15px) scale(1.03);
+    background:rgba(56,189,248,0.15);
+}
+
+.feature-card h3{
+    margin-bottom:15px;
+}
+
+/* STATS */
+.stats{
+    padding:80px 10%;
+    background:#111827;
+    text-align:center;
+}
+
+.stat-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:40px;
+}
+
+.stat h3{
+    font-size:40px;
+    color:#38bdf8;
+}
+
+.stat p{
+    margin-top:10px;
+}
+
+/* CTA */
+.cta{
+    padding:80px 10%;
+    text-align:center;
+    background:linear-gradient(to right,#6366f1,#38bdf8);
+    color:black;
+}
+
+.cta h2{
+    font-size:36px;
+    margin-bottom:20px;
+}
+
+.cta .btn{
+    background:black;
+    color:white;
+}
+
+/* FOOTER */
+footer{
+    padding:20px;
+    text-align:center;
+    background:#020617;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .hero h2{
+        font-size:35px;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+    <h1>NextGen</h1>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <h2>Build Stunning Websites That Grow Businesses</h2>
+    <p>We create modern, responsive and user-friendly websites that help brands succeed in the digital world.</p>
+    <div>
+        <a href="#" class="btn primary">Get Started</a>
+        <a href="#" class="btn secondary">Learn More</a>
+    </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+    <h2>Our Expertise</h2>
+    <div class="feature-grid">
+
+        <div class="feature-card">
+            <h3>Creative Design</h3>
+            <p>Modern UI/UX designs with clean layouts and smooth interactions.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Development</h3>
+            <p>Responsive websites built using latest web technologies.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Optimization</h3>
+            <p>Speed and SEO optimization to improve performance.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+    <div class="stat-grid">
+        <div class="stat">
+            <h3>120+</h3>
+            <p>Projects Completed</p>
+        </div>
+        <div class="stat">
+            <h3>100%</h3>
+            <p>Client Satisfaction</p>
+        </div>
+        <div class="stat">
+            <h3>5+</h3>
+            <p>Years Experience</p>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+    <h2>Ready to Launch Your Dream Website?</h2>
+    <p>Let’s build something amazing together.</p>
+    <br>
+    <a href="#" class="btn">Contact Us</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 NextGen Digital Agency | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
